@@ -59,7 +59,6 @@ const Home = () => {
             {/* Rotating Circular Path */}
             <motion.div
               className="absolute rounded-full border border-gray-300 w-36 h-36 md:w-72 md:h-72"
-              // style={{ width: "240px", height: "240px" }} // Adjusted size for mobile
               animate={{ rotate: 360 }}
               transition={{
                 repeat: Infinity,
