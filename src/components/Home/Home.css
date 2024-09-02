@@ -1,0 +1,13 @@
+@keyframes slideDown {
+  from {
+    transform: translateY(-250%);
+  }
+  to {
+    transform: translateY(0);
+  }
+}
+
+.role {
+  display: inline-block;
+  animation: slideDown 2s ease-in-out forwards;
+}
