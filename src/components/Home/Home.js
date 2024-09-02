@@ -1,6 +1,6 @@
-import React, { useState } from 'react';
-import { motion } from 'framer-motion';
-import profileImage from '../../assets/My-Image.JPG';
+import React, { useState } from "react";
+import { motion } from "framer-motion";
+import profileImage from "../../assets/Images/My-Image.JPG";
 import "./Home.css";
 
 const Home = () => {
@@ -15,17 +15,25 @@ const Home = () => {
   };
 
   return (
-    <div id="home" className="flex items-center justify-center min-h-screen bg-gray-900 px-10">
+    <div
+      id="home"
+      className="flex items-center justify-center min-h-screen bg-gray-900 px-10"
+    >
       <div className="flex flex-col md:flex-row items-center justify-center w-full p-4 md:p-8">
         {/* Content Section */}
         <div className="md:w-1/2 text-center md:text-left mb-8 md:mb-0">
           <h1 className="text-3xl md:text-4xl font-bold mb-4 text-white">
-            Hello, I'm a <span className="text-[#356c70] role">Front-End Developer</span>
+            Hello, I'm a{" "}
+            <span className="text-[#356c70] role">Front-End Developer</span>
           </h1>
           <p className="text-md md:text-lg mb-6 text-white">
-            With over 3 years of experience, I design and maintain web applications using HTML, CSS, JavaScript, TypeScript, Angular, React, and Next.js. I specialize in creating responsive, high-performance interfaces and stay current with industry trends to deliver innovative, user-centric solutions.
+            With over 3 years of experience, I design and maintain web
+            applications using HTML, CSS, JavaScript, TypeScript, Angular,
+            React, and Next.js. I specialize in creating responsive,
+            high-performance interfaces and stay current with industry trends to
+            deliver innovative, user-centric solutions.
           </p>
-          <button 
+          <button
             onClick={openModal}
             className="px-6 py-2 cursor-pointer bg-[#356c70] text-white font-semibold rounded-md shadow transition-all hover:scale-[1.02] active:scale-[0.98]"
           >
@@ -51,12 +59,12 @@ const Home = () => {
             {/* Rotating Circular Path */}
             <motion.div
               className="absolute rounded-full border border-gray-300"
-              style={{ width: '320px', height: '320px' }}
+              style={{ width: "320px", height: "320px" }}
               animate={{ rotate: 360 }}
               transition={{
                 repeat: Infinity,
                 duration: 8,
-                ease: 'linear',
+                ease: "linear",
               }}
             >
               {/* Dots positioned on the Circular Path */}
@@ -66,7 +74,6 @@ const Home = () => {
               <div className="absolute w-4 h-4 bg-[#356c70] rounded-full right-0 top-1/2 transform -translate-y-1/2 translate-x-1/2" />
             </motion.div>
           </div>
-          
         </motion.div>
       </div>
 
@@ -74,22 +81,33 @@ const Home = () => {
       {isModalOpen && (
         <div className="fixed inset-0 bg-opacity-50 flex items-start justify-center z-50 p-4">
           <div className="relative bg-white p-6 rounded-md shadow-lg w-80 md:w-96">
-            <button 
+            <button
               onClick={closeModal}
               className="absolute top-2 right-2 text-gray-500 hover:text-gray-700 transition cursor-pointer"
             >
               <i className="fas fa-times fa-lg"></i>
             </button>
             <div className="flex flex-col space-y-4">
-              <a href="mailto:mounikadonga113@gmail.com" className="flex items-center text-gray-700 no-underline">
+              <a
+                href="mailto:mounikadonga113@gmail.com"
+                className="flex items-center text-gray-700 no-underline"
+              >
                 <i className="fas fa-envelope mr-2"></i>
                 <span>mounikadonga113@gmail.com</span>
               </a>
-              <a href="https://linkedin.com/in/mounika-d-0057321a7" className="flex items-center text-gray-700 no-underline" target="_blank" rel="noopener noreferrer">
+              <a
+                href="https://linkedin.com/in/mounika-d-0057321a7"
+                className="flex items-center text-gray-700 no-underline"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
                 <i className="fab fa-linkedin mr-2"></i>
                 <span>linkedin.com/in/mounika-d-0057321a7</span>
               </a>
-              <a href="tel:8074408793" className="flex items-center text-gray-700 no-underline">
+              <a
+                href="tel:8074408793"
+                className="flex items-center text-gray-700 no-underline"
+              >
                 <i className="fas fa-mobile-alt mr-2"></i>
                 <span>(+91) 8074408793</span>
               </a>

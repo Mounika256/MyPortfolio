@@ -1,10 +1,10 @@
-import React, { useState } from 'react';
-import { FaDownload, FaBars, FaTimes } from 'react-icons/fa';
-import Logo from "../../assets/MDLogo.svg";
+import React, { useState } from "react";
+import { FaDownload, FaBars, FaTimes } from "react-icons/fa";
+import Logo from "../../assets/Images/MDLogo.svg";
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const [activeItem, setActiveItem] = useState('home');
+  const [activeItem, setActiveItem] = useState("home");
 
   const toggleMenu = () => setIsMenuOpen(!isMenuOpen);
 
@@ -19,7 +19,11 @@ const Header = () => {
         <div className="w-12 h-12 bg-white rounded-full flex items-center justify-center mx-5">
           <span className="text-xl font-bold text-[#356c70]">
             <a href="/">
-              <img src={Logo} alt="logo" className="rounded-full shadow-lg object-cover no-underline" />
+              <img
+                src={Logo}
+                alt="logo"
+                className="rounded-full shadow-lg object-cover no-underline"
+              />
             </a>
           </span>
         </div>
@@ -33,22 +37,28 @@ const Header = () => {
       </div>
 
       {/* Navigation Menu */}
-      <nav className={`${isMenuOpen ? 'block' : 'hidden'} w-full md:flex md:items-center md:w-auto`}>
+      <nav
+        className={`${
+          isMenuOpen ? "block" : "hidden"
+        } w-full md:flex md:items-center md:w-auto`}
+      >
         <ul className="flex flex-col md:flex-row items-center space-y-4 md:space-y-0 md:space-x-6">
           {[
-            { label: 'Home', href: '#home' },
-            { label: 'About', href: '#about' },
-            { label: 'Skills', href: '#skills' },
-            { label: 'Projects', href: '#projects' },
+            { label: "Home", href: "#home" },
+            { label: "About", href: "#about" },
+            { label: "Skills", href: "#skills" },
+            { label: "Projects", href: "#projects" },
           ].map((item) => (
             <li key={item.label}>
               <a
                 href={item.href}
                 onClick={() => handleItemClick(item.label.toLowerCase())}
                 className={`text-white no-underline transition-transform hover:scale-105 ${
-                  activeItem === item.label.toLowerCase() ? 'font-extrabold scale-105' : 'hover:text-gray-300'
+                  activeItem === item.label.toLowerCase()
+                    ? "font-extrabold scale-105"
+                    : "hover:text-gray-300"
                 }`}
-                style={{ display: 'inline-block' }}
+                style={{ display: "inline-block" }}
               >
                 {item.label}
               </a>
